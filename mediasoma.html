@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética Entre Dois Números</title>
+    <script>
+        function calcularMedia() {
+            let num1 = parseInt(prompt("Informe o primeiro número (menor):"));
+            let num2 = parseInt(prompt("Informe o segundo número (maior):"));
+
+            if (num1 >= num2) {
+                alert("O primeiro número deve ser menor que o segundo.");
+                return;
+            }
+
+            let soma = 0;
+            let contador = 0;
+
+            for (let i = num1; i <= num2; i++) {
+                soma += i;
+                contador++;
+            }
+
+            let media = soma / contador;
+            console.log(`A média aritmética entre ${num1} e ${num2} é: ${media}`);
+            alert(`A média aritmética entre ${num1} e ${num2} é: ${media}`);
+        }
+        
+        window.onload = calcularMedia;
+    </script>
+</head>
+<body>
+    <h1>Cálculo da Média Aritmética</h1>
+    <p>Uma janela de prompt aparecerá para você informar os números!</p>
+</body>
+</html>

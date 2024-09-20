@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuadas de 1 a N</title>
+    <script>
+        function imprimirTabuadas() {
+            let N = parseInt(prompt("Informe um número N para ver as tabuadas de 1 a N:"));
+            let resultado = "";
+
+            for (let n = 1; n <= N; n++) {
+                resultado += `Tabuada de ${n}:\n`;
+                for (let i = 1; i <= 10; i++) {
+                    resultado += `${n} x ${i} = ${n * i}\n`;
+                }
+                resultado += "\n"; 
+            }
+
+            alert(resultado);
+        }
+        window.onload = imprimirTabuadas;
+    </script>
+</head>
+<body>
+    <h1>Tabuadas de 1 a N</h1>
+    <p>Uma janela de prompt aparecerá para você informar o 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Média de Alunos</title>
+    <script>
+        let alunosAprovados = 0;
+
+        function calcularMedia() {
+            let nota1 = parseFloat(prompt("Informe a primeira nota:"));
+            let nota2 = parseFloat(prompt("Informe a segunda nota:"));
+            let media = (nota1 + nota2) / 2;
+
+            if (media >= 9.5) {
+                alunosAprovados++;
+                alert(`Média: ${media}. Aluno aprovado!`);
+            } else {
+                alert(`Média: ${media}. Aluno reprovado.`);
+            }
+
+            let continuar = prompt("Calcular a média de outro aluno? (S/N)").toUpperCase();
+            if (continuar === 'S') {
+                calcularMedia(); 
+                alert(`Total de alunos aprovados: ${alunosAprovados}`);
+            }
+        }
+
+        window.onload = calcularMedia;
+    </script>
+</head>
+<body>
+    <h1>Cálculo da Média de Alunos</h1>
+    <p>Uma janela de prompt aparecerá para você informar as notas!</p>
+</body>
+</html>

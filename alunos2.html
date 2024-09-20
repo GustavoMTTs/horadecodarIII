@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média das Notas</title>
+    <script>
+        function calcularMedia() {
+            let totalNotas = 6;
+            let notas = [];
+            let soma = 0;
+
+            for (let i = 0; i < totalNotas; i++) {
+                let nota;
+                do {
+                    nota = parseFloat(prompt(`Informe a nota ${i + 1} (entre 0 e 10):`));
+                    if (nota < 0 || nota > 10) {
+                        alert("Nota inválida! Por favor, informe uma nota entre 0 e 10.");
+                    }
+                } while (nota < 0 || nota > 10); 
+
+                notas.push(nota);
+                soma += nota; 
+            }
+
+            let media = soma / totalNotas; 
+            alert(`As notas informadas foram: ${notas.join(", ")}`);
+            alert(`A média das notas é: ${media.toFixed(2)}`); 
+        }
+
+        window.onload = calcularMedia;
+    </script>
+</head>
+<body>
+    <h1>Cálculo da Média das Notas</h1>
+    <p>Uma janela de prompt aparecerá para você informar as notas!</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Valores em Intervalo</title>
+    <script>
+        function contarValores() {
+            let dentroIntervalo = 0;
+            let foraIntervalo = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                let valor = parseFloat(prompt(`Informe o valor ${i} de 10:`));
+
+
+                if (valor >= 24 && valor <= 42) {
+                    dentroIntervalo++;
+                } else {
+                    foraIntervalo++;
+                }
+            }
+
+            alert(`Total de valores entre 24 e 42: ${dentroIntervalo}`);
+            alert(`Total de valores fora do intervalo: ${foraIntervalo}`);
+        }
+        
+        window.onload = contarValores;
+    </script>
+</head>
+<body>
+    <h1>Contar Valores em Intervalo</h1>
+    <p>Uma janela de prompt aparecerá para você informar 10 valores!</p>
+</body>
+</html>

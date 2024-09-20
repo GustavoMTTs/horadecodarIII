@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomba Relógio</title>
+    <script>
+        function bombaRelogio() {
+            let contador = 30;
+            const intervalo = setInterval(() => {
+                console.log(contador);
+                contador--;
+
+                if (contador < 0) {
+                    clearInterval(intervalo);
+                    console.log("EXPLOSÃO");
+                }
+            }, 1000);
+        }
+        
+        window.onload = bombaRelogio;
+    </script>
+</head>
+<body>
+    <h1>Bomba Relógio</h1>
+    <p>Abra o console do navegador para ver a contagem regressiva!</p>
+</body>
+</html>

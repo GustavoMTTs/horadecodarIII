@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Dois Valores</title>
+    <script>
+        function realizarDivisao() {
+            let valor1 = parseFloat(document.getElementById("valor1").value);
+            let valor2;
+
+            do {
+                valor2 = parseFloat(prompt("Informe o segundo valor (deve ser maior que zero):"));
+            } while (valor2 <= 0);
+
+            let resultado = valor1 / valor2;
+
+            document.getElementById("resultado").innerText = `Resultado da divisão: ${resultado}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Divisão de Dois Valores</h1>
+    <label for="valor1">Primeiro valor:</label>
+    <input type="number" id="valor1" required>
+    <br><br>
+    <button onclick="realizarDivisao()">Calcular Divisão</button>
+    <h2 id="resultado"></h2>
+</body>
+</html>

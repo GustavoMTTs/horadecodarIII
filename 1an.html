@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir Números de 1 a N</title>
+    <script>
+        function imprimirValores() {
+            let N = parseInt(prompt("Informe um valor N (maior que zero):"));
+
+            if (N <= 0) {
+                alert("O valor deve ser maior que zero.");
+                return;
+            }
+
+            let resultado = "";
+            for (let i = 1; i <= N; i++) {
+                resultado += i + (i < N ? ", " : ""); 
+            }
+
+            alert(`Os números de 1 a ${N} são: ${resultado}`);
+        }
+
+        window.onload = imprimirValores;
+    </script>
+</head>
+<body>
+    <h1>Imprimir Números de 1 a N</h1>
+    <p>Uma janela de prompt aparecerá para você informar o valor N!</p>
+</body>
+</html>
